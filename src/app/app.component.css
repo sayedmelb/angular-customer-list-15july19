@@ -1,0 +1,24 @@
+p {
+  font-family: Lato;
+}
+.filter-container {
+  padding-top: 5rem;
+  
+  padding-bottom: 5rem;
+  color: #405065;
+  background-color: #d9e7fa;
+
+}
+
+.search-customer {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+}
+.pad {
+  padding: 0.5rem;
+}
+.hand {
+  cursor: pointer;
+}
+

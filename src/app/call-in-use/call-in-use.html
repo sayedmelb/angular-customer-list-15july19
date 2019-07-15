@@ -1,0 +1,76 @@
+<div><h3>Call in Use</h3></div>
+<div  class="container filter-container">
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         Title:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <input [(ngModel)]= data.title>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         First Name:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <input [(ngModel)]= data.firstName>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         Surname:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <input [(ngModel)]= data.lastName>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         Mobile:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <input [(ngModel)]= data.mobile>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8 pad">
+         <button class="btn btn-primary" (click)="callMobile()">Call Mobile</button>
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         Home:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <input [(ngModel)]= data.home>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8 pad">
+         <button class="btn btn-primary" (click)="callHome()">Call Home</button>
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <button class="btn btn-success " (click)="updateModel()">Update</button>&nbsp;
+         <button class="btn btn-secondary" (click)="reset()">Reset</button>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+   <hr>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+       <button class="btn btn-info " (click)="callCompleted()">Call Completed</button>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+</div>
+

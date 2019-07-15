@@ -1,0 +1,19 @@
+.card {
+  border: 1px solid grey;
+  background-color: silver;
+
+}
+.filter-container {
+  padding-top: 5rem;
+  
+  padding-bottom: 5rem;
+  color: #405065;
+  background-color: #d9e7fa;
+
+}
+.pad {
+  padding: 0.5rem;
+}
+.hand {
+  cursor: pointer;
+}

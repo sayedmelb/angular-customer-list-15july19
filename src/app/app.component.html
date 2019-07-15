@@ -1,0 +1,94 @@
+<div>
+   <h1>Customer Service Portal</h1>
+   <hr>
+</div>
+<div *ngIf="toggle" class="container filter-container">
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         Call Type:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <select [(ngModel)]="selectedCalltype">
+         <option *ngFor="let name of callType"
+         [value]="name">{{name}}
+         </option>
+         </select>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-5 col-sm-5 col-md-2 pad">
+         Status:
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-2 pad">
+         <select [(ngModel)]="selectedstatus">
+         <option *ngFor="let name of statuslist"
+         [value]="name">{{name}}
+         </option>
+         </select>
+      </div>
+      <div class=" col-xs-2 col-sm-2 col-md-8">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-3 col-sm-3 col-md-2 pad">
+         Date Sold:
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 pad">
+         <input type="date" name="fromDate" [(ngModel)]="fromDate"> 
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1 pad">
+         to
+      </div>
+      <div class=" col-xs-5 col-sm-5 col-md-5 pad">
+         <input type="date" name="toDate" [(ngModel)]="toDate">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-3 col-sm-3 col-md-2">
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 pad">
+         <button class="btn btn-success" (click)="getData()">Search</button> &nbsp;
+         <button class="btn btn-secondary" (click)="resetList()"> Reset</button> <br>
+      </div>
+      <div class="col-xs-1 col-sm-1 col-md-1">
+      </div>
+      <div class=" col-xs-5 col-sm-5 col-md-5">
+      </div>
+   </div>
+   <div class="row">
+      <div class=" col-xs-3 col-sm-3 col-md-2">
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-5 pad">
+         <span *ngIf="filterStatus">The list below is filtered, click reset to get full list</span>
+      </div>
+      <div class=" col-xs-4 col-sm-4 col-md-4">
+      </div>
+   </div>
+</div>
+
+<div *ngIf="toggle" class="container">
+   <table class="table table-striped">
+      <thead>
+         <tr>
+            <!-- <th>Id</th> -->
+            <th >Name</th>
+            <th class="pad">Sold</th>
+            <th >Status</th>
+            <th >Call Type</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let customer of datalist" >
+            <td class="pad hand " (click)="getInCall(customer)"> {{customer.fullName}}</td>
+            <td class="pad hand" (click)="getInCall(customer)">{{customer.dos | date }}</td>
+            <td class="pad hand" (click)="getInCall(customer)">{{customer.status}}</td>
+            <td class="pad hand" (click)="getInCall(customer)">{{customer.callType}}</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+<div *ngIf="!toggle">
+   <call-in-use [data]=model (togglestate)="onstateChange($event)" (outmodel)="onModelChange($event)"  ></call-in-use>
+</div>
